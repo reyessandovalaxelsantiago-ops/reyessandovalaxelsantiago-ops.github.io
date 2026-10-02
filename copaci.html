@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COPACI · Panel de Gestión</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="copaci.css">
+</head>
+<body class="copaci-body">
+
+  <div class="copaci-panel">
+
+    <div class="copaci-topbar">
+      <div class="copaci-topbar-left">
+        <div class="copaci-escudo"><i class="fas fa-users"></i></div>
+        <div>
+          <div class="copaci-topbar-title">COPACI · Panel de Gestión</div>
+          <div class="copaci-topbar-sub">Sistema de Gestión Institucional</div>
+        </div>
+      </div>
+
+      <div class="copaci-topbar-right">
+        <div class="copaci-user">
+          <i class="fas fa-user-tie"></i>
+          <div class="copaci-user-info">
+            <span class="copaci-user-name">Usuario COPACI</span>
+            <span class="copaci-user-role">Rol: Gestión Operativa</span>
+          </div>
+        </div>
+        <button class="logout-btn" id="logoutBtn">
+          <i class="fas fa-sign-out-alt"></i> <span>Cerrar sesión</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="copaci-section-header">
+      <div>
+        <h2><i class="fas fa-briefcase"></i> Panel de Acciones · COPACI</h2>
+        <p>Seleccione una acción del sistema para continuar</p>
+      </div>
+      <div class="copaci-badge"><i class="fas fa-circle-check"></i> Sesión activa</div>
+    </div>
+
+    <div class="copaci-actions-grid">
+
+      <div class="copaci-action-card" data-action="Opciones">
+        <div class="copaci-action-icon"><i class="fas fa-sliders"></i></div>
+        <div class="copaci-action-content"><h3>Opciones</h3><p>Configuración del sistema</p></div>
+        <i class="fas fa-chevron-right copaci-action-arrow"></i>
+      </div>
+
+      <div class="copaci-action-card" data-action="Solicitud de eventos">
+        <div class="copaci-action-icon"><i class="fas fa-calendar-plus"></i></div>
+        <div class="copaci-action-content"><h3>Solicitud de eventos</h3><p>Gestión y aprobación de eventos</p></div>
+        <i class="fas fa-chevron-right copaci-action-arrow"></i>
+      </div>
+
+      <div class="copaci-action-card" data-action="Avisos a la comunidad">
+        <div class="copaci-action-icon"><i class="fas fa-bullhorn"></i></div>
+        <div class="copaci-action-content"><h3>Avisos a la comunidad</h3><p>Comunicados oficiales</p></div>
+        <i class="fas fa-chevron-right copaci-action-arrow"></i>
+      </div>
+
+      <div class="copaci-action-card" data-action="Acciones trimestrales">
+        <div class="copaci-action-icon"><i class="fas fa-chart-pie"></i></div>
+        <div class="copaci-action-content"><h3>Información de acciones trimestrales</h3><p>Reporte de avances por trimestre</p></div>
+        <i class="fas fa-chevron-right copaci-action-arrow"></i>
+      </div>
+
+      <div class="copaci-action-card" data-action="Trámites de documentos">
+        <div class="copaci-action-icon"><i class="fas fa-file-signature"></i></div>
+        <div class="copaci-action-content"><h3>Trámites de documentos</h3><p>Gestión documental institucional</p></div>
+        <i class="fas fa-chevron-right copaci-action-arrow"></i>
+      </div>
+
+      <div class="copaci-action-card" data-action="Reportes">
+        <div class="copaci-action-icon"><i class="fas fa-chart-bar"></i></div>
+        <div class="copaci-action-content"><h3>Reportes</h3><p>Generación de informes oficiales</p></div>
+        <i class="fas fa-chevron-right copaci-action-arrow"></i>
+      </div>
+
+      <div class="copaci-action-card" data-action="Visualizaciones de cuentas">
+        <div class="copaci-action-icon"><i class="fas fa-eye"></i></div>
+        <div class="copaci-action-content"><h3>Visualizaciones de cuentas</h3><p>Consulta de estados financieros</p></div>
+        <i class="fas fa-chevron-right copaci-action-arrow"></i>
+      </div>
+
+    </div>
+
+    <div class="copaci-footer">
+      <span><i class="fas fa-lock"></i> Conexión cifrada · SSL</span>
+      <span>COPACI &copy; 2025 · Todos los derechos reservados</span>
+    </div>
+  </div>
+
+  <script src="copaci.js"></script>
+</body>
+</html>

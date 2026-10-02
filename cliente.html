@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COPACI · Panel del Cliente</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="cliente.css">
+</head>
+<body class="cliente-body">
+
+  <div class="cliente-panel">
+
+    <div class="cliente-topbar">
+      <div class="cliente-topbar-left">
+        <div class="cliente-escudo"><i class="fas fa-user-circle"></i></div>
+        <div>
+          <div class="cliente-topbar-title">COPACI · Panel del Cliente</div>
+          <div class="cliente-topbar-sub">Portal de Servicios al Ciudadano</div>
+        </div>
+      </div>
+
+      <div class="cliente-topbar-right">
+        <div class="cliente-user">
+          <i class="fas fa-user"></i>
+          <div class="cliente-user-info">
+            <span class="cliente-user-name">Cliente</span>
+            <span class="cliente-user-role">Rol: Consulta y solicitudes</span>
+          </div>
+        </div>
+        <button class="logout-btn" id="logoutBtn">
+          <i class="fas fa-sign-out-alt"></i> <span>Salir</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="cliente-section-header">
+      <div>
+        <h2><i class="fas fa-list-check"></i> Servicios disponibles</h2>
+        <p>Seleccione un servicio para continuar</p>
+      </div>
+      <div class="cliente-badge"><i class="fas fa-circle-check"></i> Acceso ciudadano</div>
+    </div>
+
+    <div class="cliente-actions-grid">
+
+      <div class="cliente-action-card" data-action="Opiniones">
+        <div class="cliente-action-icon"><i class="fas fa-comment-dots"></i></div>
+        <div class="cliente-action-content"><h3>Opiniones</h3><p>Enviar comentarios y sugerencias</p></div>
+        <i class="fas fa-chevron-right cliente-action-arrow"></i>
+      </div>
+
+      <div class="cliente-action-card" data-action="Solicitud de eventos">
+        <div class="cliente-action-icon"><i class="fas fa-calendar-plus"></i></div>
+        <div class="cliente-action-content"><h3>Solicitud de eventos</h3><p>Solicitar eventos comunitarios</p></div>
+        <i class="fas fa-chevron-right cliente-action-arrow"></i>
+      </div>
+
+      <div class="cliente-action-card" data-action="Avisos a la comunidad">
+        <div class="cliente-action-icon"><i class="fas fa-bullhorn"></i></div>
+        <div class="cliente-action-content"><h3>Avisos a la comunidad</h3><p>Consultar comunicados oficiales</p></div>
+        <i class="fas fa-chevron-right cliente-action-arrow"></i>
+      </div>
+
+      <div class="cliente-action-card" data-action="Informe de acciones trimestrales">
+        <div class="cliente-action-icon"><i class="fas fa-chart-pie"></i></div>
+        <div class="cliente-action-content"><h3>Informe de acciones trimestrales</h3><p>Conocer avances por trimestre</p></div>
+        <i class="fas fa-chevron-right cliente-action-arrow"></i>
+      </div>
+
+      <div class="cliente-action-card" data-action="Trámites de documentos">
+        <div class="cliente-action-icon"><i class="fas fa-file-signature"></i></div>
+        <div class="cliente-action-content"><h3>Trámites de documentos</h3><p>Iniciar o dar seguimiento a trámites</p></div>
+        <i class="fas fa-chevron-right cliente-action-arrow"></i>
+      </div>
+
+      <div class="cliente-action-card" data-action="Reportar">
+        <div class="cliente-action-icon"><i class="fas fa-flag"></i></div>
+        <div class="cliente-action-content"><h3>Reportar</h3><p>Reportar una incidencia o problema</p></div>
+        <i class="fas fa-chevron-right cliente-action-arrow"></i>
+      </div>
+
+      <div class="cliente-action-card" data-action="Visualizaciones de cuentas">
+        <div class="cliente-action-icon"><i class="fas fa-eye"></i></div>
+        <div class="cliente-action-content"><h3>Visualizaciones de cuentas</h3><p>Consultar el estado de su cuenta</p></div>
+        <i class="fas fa-chevron-right cliente-action-arrow"></i>
+      </div>
+
+      <div class="cliente-action-card" data-action="Membresías">
+        <div class="cliente-action-icon"><i class="fas fa-id-card"></i></div>
+        <div class="cliente-action-content"><h3>Membresías</h3><p>Consultar o renovar su membresía</p></div>
+        <i class="fas fa-chevron-right cliente-action-arrow"></i>
+      </div>
+
+    </div>
+
+    <div class="cliente-footer">
+      <span><i class="fas fa-lock"></i> Conexión cifrada · SSL</span>
+      <span>COPACI &copy; 2025 · Atención ciudadana</span>
+    </div>
+  </div>
+
+  <script src="cliente.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COPACI · Iniciar Sesión</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="gov-topbar">
+    <div class="gov-topbar-inner">
+      <span class="gov-topbar-item"><i class="fas fa-landmark"></i> Gobierno de México</span>
+      <span class="gov-topbar-item"><i class="fas fa-shield-halved"></i> Portal Oficial</span>
+      <span class="gov-topbar-item"><i class="fas fa-phone"></i> Contacto: 800 000 0000</span>
+    </div>
+  </div>
+
+  <div class="login-container">
+
+    <div class="gov-header">
+      <div class="gov-escudo"><i class="fas fa-landmark"></i></div>
+      <div class="gov-header-text">
+        <span class="gov-header-title">COPACI</span>
+        <span class="gov-header-sub">Sistema de Gestión Institucional</span>
+      </div>
+    </div>
+
+    <div class="login-title">
+      <h1>Iniciar Sesión</h1>
+      <p>Acceso exclusivo para personal autorizado</p>
+    </div>
+
+    <form class="login-form" id="loginForm" onsubmit="return false;">
+      <div class="input-group">
+        <label for="username"><i class="fas fa-user"></i> Usuario</label>
+        <input type="text" id="username" placeholder="Ingrese su usuario institucional" autocomplete="off">
+      </div>
+
+      <div class="input-group">
+        <label for="password"><i class="fas fa-lock"></i> Contraseña</label>
+        <input type="password" id="password" placeholder="Ingrese su contraseña">
+      </div>
+
+      <div class="login-extras">
+        <label class="remember"><input type="checkbox" checked> Recordarme</label>
+        <a href="#" class="forgot">¿Olvidó su contraseña?</a>
+      </div>
+
+      <button class="btn-login" id="loginBtn" type="button">
+        <i class="fas fa-arrow-right-to-bracket"></i> Acceder al Sistema
+      </button>
+    </form>
+
+    <div class="login-hint">
+  <p><strong>Credenciales:</strong></p>
+  <p><i class="fas fa-user-shield"></i> admin / admin123</p>
+  <p><i class="fas fa-users"></i> copaci / copaci123</p>
+  <p><i class="fas fa-user"></i> cliente / (sin contraseña)</p>
+</div>
+
+    <div class="login-legal">
+      <p><i class="fas fa-lock"></i> Conexión segura · Los datos están protegidos</p>
+      <p class="legal-links">
+        <a href="#">Aviso de Privacidad</a> ·
+        <a href="#">Términos de Uso</a> ·
+        <a href="#">Soporte</a>
+      </p>
+    </div>
+
+    <div class="login-version">
+      <i class="fas fa-code-branch"></i> Versión 2.3.0 · COPACI &copy; 2025
+    </div>
+  </div>
+
+  <script src="cliente.js"></script>
+</body>
+</html>

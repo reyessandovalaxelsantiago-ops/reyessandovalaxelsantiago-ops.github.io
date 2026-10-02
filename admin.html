@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COPACI · Panel Administrador</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin-body">
+
+  <div class="admin-panel">
+
+    <div class="admin-topbar">
+      <div class="admin-topbar-left">
+        <div class="admin-escudo"><i class="fas fa-landmark"></i></div>
+        <div>
+          <div class="admin-topbar-title">COPACI · Panel de Administración</div>
+          <div class="admin-topbar-sub">Sistema de Gestión Institucional</div>
+        </div>
+      </div>
+
+      <div class="admin-topbar-right">
+        <div class="admin-user">
+          <i class="fas fa-user-shield"></i>
+          <div class="admin-user-info">
+            <span class="admin-user-name">Administrador</span>
+            <span class="admin-user-role">Rol: Acceso Total</span>
+          </div>
+        </div>
+        <button class="logout-btn" id="logoutBtn">
+          <i class="fas fa-sign-out-alt"></i> <span>Cerrar sesión</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="admin-section-header">
+      <div>
+        <h2><i class="fas fa-clipboard-list"></i> Panel de Acciones · Administrador</h2>
+        <p>Seleccione una acción del sistema para continuar</p>
+      </div>
+      <div class="admin-badge"><i class="fas fa-circle-check"></i> Sesión activa</div>
+    </div>
+
+    <div class="actions-grid">
+
+      <div class="action-card" data-action="Registrar nuevos usuarios">
+        <div class="action-icon"><i class="fas fa-user-plus"></i></div>
+        <div class="action-content">
+          <h3>Registrar nuevos usuarios</h3>
+          <p>Alta de miembros en el sistema</p>
+        </div>
+        <i class="fas fa-chevron-right action-arrow"></i>
+      </div>
+
+      <div class="action-card" data-action="Registrar">
+        <div class="action-icon"><i class="fas fa-pen-to-square"></i></div>
+        <div class="action-content"><h3>Registrar</h3><p>Crear nuevos registros</p></div>
+        <i class="fas fa-chevron-right action-arrow"></i>
+      </div>
+
+      <div class="action-card" data-action="Eliminar">
+        <div class="action-icon"><i class="fas fa-trash-can"></i></div>
+        <div class="action-content"><h3>Eliminar</h3><p>Baja de registros del sistema</p></div>
+        <i class="fas fa-chevron-right action-arrow"></i>
+      </div>
+
+      <div class="action-card" data-action="Actualizar">
+        <div class="action-icon"><i class="fas fa-rotate-right"></i></div>
+        <div class="action-content"><h3>Actualizar</h3><p>Modificar información existente</p></div>
+        <i class="fas fa-chevron-right action-arrow"></i>
+      </div>
+
+      <div class="action-card" data-action="Opciones">
+        <div class="action-icon"><i class="fas fa-sliders"></i></div>
+        <div class="action-content"><h3>Opciones</h3><p>Configuración del sistema</p></div>
+        <i class="fas fa-chevron-right action-arrow"></i>
+      </div>
+
+      <div class="action-card" data-action="Solicitud de eventos">
+        <div class="action-icon"><i class="fas fa-calendar-plus"></i></div>
+        <div class="action-content"><h3>Solicitud de eventos</h3><p>Gestión y aprobación de eventos</p></div>
+        <i class="fas fa-chevron-right action-arrow"></i>
+      </div>
+
+      <div class="action-card" data-action="Avisos a la comunidad">
+        <div class="action-icon"><i class="fas fa-bullhorn"></i></div>
+        <div class="action-content"><h3>Avisos a la comunidad</h3><p>Comunicados oficiales</p></div>
+        <i class="fas fa-chevron-right action-arrow"></i>
+      </div>
+
+      <div class="action-card" data-action="Acciones trimestrales">
+        <div class="action-icon"><i class="fas fa-chart-pie"></i></div>
+        <div class="action-content"><h3>Información de acciones trimestrales</h3><p>Reporte de avances por trimestre</p></div>
+        <i class="fas fa-chevron-right action-arrow"></i>
+      </div>
+
+      <div class="action-card" data-action="Trámites de documentos">
+        <div class="action-icon"><i class="fas fa-file-signature"></i></div>
+        <div class="action-content"><h3>Trámites de documentos</h3><p>Gestión documental institucional</p></div>
+        <i class="fas fa-chevron-right action-arrow"></i>
+      </div>
+
+      <div class="action-card" data-action="Reportes">
+        <div class="action-icon"><i class="fas fa-chart-bar"></i></div>
+        <div class="action-content"><h3>Reportes</h3><p>Generación de informes oficiales</p></div>
+        <i class="fas fa-chevron-right action-arrow"></i>
+      </div>
+
+      <div class="action-card" data-action="Visualizaciones de cuentas">
+        <div class="action-icon"><i class="fas fa-eye"></i></div>
+        <div class="action-content"><h3>Visualizaciones de cuentas</h3><p>Consulta de estados financieros</p></div>
+        <i class="fas fa-chevron-right action-arrow"></i>
+      </div>
+
+      <div class="action-card" data-action="Membresías">
+        <div class="action-icon"><i class="fas fa-id-card"></i></div>
+        <div class="action-content"><h3>Membresías</h3><p>Control y renovación de membresías</p></div>
+        <i class="fas fa-chevron-right action-arrow"></i>
+      </div>
+
+    </div>
+
+    <div class="admin-footer">
+      <span><i class="fas fa-lock"></i> Conexión cifrada · SSL</span>
+      <span>COPACI &copy; 2025 · Todos los derechos reservados</span>
+    </div>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>

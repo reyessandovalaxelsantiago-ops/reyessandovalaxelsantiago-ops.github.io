@@ -1,0 +1,261 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --login-red: #c94a4a;
+  --login-red-dark: #a83a3a;
+  --login-red-light: #f5e0e0;
+  --login-yellow: #f5d77a;
+  --login-yellow-light: #fdf6e3;
+  --login-bg-from: #fdf6f0;
+  --login-bg-to: #f7e8e8;
+  --login-text: #3d2b2b;
+  --gov-dark: #1f2937;
+  --gov-gray: #4b5563;
+  --font-titles: 'Merriweather', Georgia, serif;
+  --font-body: 'Source Sans 3', 'Segoe UI', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--login-bg-from) 0%, var(--login-bg-to) 100%);
+  color: var(--login-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 1.5rem 2rem;
+}
+
+.gov-topbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  background: var(--gov-dark);
+  color: white;
+  font-size: 0.78rem;
+  padding: 0.5rem 1.5rem;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.gov-topbar-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.gov-topbar-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  opacity: 0.9;
+}
+
+.gov-topbar-item i { color: #fbbf24; }
+
+.login-container {
+  width: 100%;
+  max-width: 460px;
+  background: white;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(201,74,74,0.25), 0 0 0 1px rgba(201,74,74,0.08);
+}
+
+.gov-header {
+  background: linear-gradient(135deg, var(--login-red) 0%, var(--login-red-dark) 100%);
+  color: white;
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.gov-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 5px;
+  background: var(--login-yellow);
+}
+
+.gov-escudo {
+  width: 3.5rem; height: 3.5rem;
+  background: var(--login-yellow);
+  color: var(--login-red-dark);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  flex-shrink: 0;
+}
+
+.gov-header-text { display: flex; flex-direction: column; }
+
+.gov-header-title {
+  font-family: var(--font-titles);
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  line-height: 1;
+}
+
+.gov-header-sub {
+  font-size: 0.8rem;
+  opacity: 0.9;
+  margin-top: 0.25rem;
+}
+
+.login-title {
+  padding: 1.75rem 2rem 0.5rem;
+  text-align: center;
+}
+
+.login-title h1 {
+  font-family: var(--font-titles);
+  font-size: 1.5rem;
+  color: var(--login-red-dark);
+}
+
+.login-title p {
+  font-size: 0.88rem;
+  color: var(--gov-gray);
+  margin-top: 0.35rem;
+}
+
+.login-form { padding: 1.25rem 2rem 0.5rem; }
+
+.input-group { margin-bottom: 1.15rem; }
+
+.input-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--login-red-dark);
+  margin-bottom: 0.5rem;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1.5px solid #e5cfcf;
+  border-radius: 0.5rem;
+  background: var(--login-yellow-light);
+  font-size: 0.95rem;
+  font-family: var(--font-body);
+  outline: none;
+  transition: all 0.2s;
+}
+
+.input-group input:focus {
+  border-color: var(--login-red);
+  background: white;
+  box-shadow: 0 0 0 4px rgba(201,74,74,0.12);
+}
+
+.login-extras {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.82rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.remember { display: flex; align-items: center; gap: 0.4rem; color: var(--gov-gray); }
+.remember input { accent-color: var(--login-red); }
+
+.forgot { color: var(--login-red); text-decoration: none; font-weight: 600; }
+.forgot:hover { text-decoration: underline; }
+
+.btn-login {
+  width: 100%;
+  padding: 0.95rem;
+  background: linear-gradient(135deg, var(--login-red) 0%, var(--login-red-dark) 100%);
+  border: none;
+  border-radius: 0.5rem;
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: var(--font-body);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 6px 15px rgba(201,74,74,0.35);
+  position: relative;
+}
+
+.btn-login::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 3px;
+  background: var(--login-yellow);
+}
+
+.btn-login:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(201,74,74,0.45); }
+.btn-login:active { transform: translateY(0); }
+
+.login-hint {
+  margin: 0 2rem 0.5rem;
+  padding: 0.75rem 1rem;
+  background: var(--login-yellow-light);
+  border-left: 3px solid var(--login-yellow);
+  border-radius: 0.35rem;
+  font-size: 0.75rem;
+  color: var(--login-red-dark);
+  text-align: center;
+}
+
+.login-hint p:first-child { font-weight: 700; margin-bottom: 0.25rem; }
+.login-hint i { color: var(--login-red); margin-right: 0.2rem; }
+
+.login-legal {
+  padding: 1.25rem 2rem 0;
+  text-align: center;
+  font-size: 0.78rem;
+  color: var(--gov-gray);
+  border-top: 1px solid var(--login-red-light);
+  margin-top: 1rem;
+}
+
+.login-legal p:first-child {
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  color: var(--login-red-dark);
+  font-weight: 600;
+}
+
+.legal-links a { color: var(--gov-gray); text-decoration: none; }
+.legal-links a:hover { color: var(--login-red); text-decoration: underline; }
+
+.login-version {
+  padding: 1rem 2rem 1.5rem;
+  text-align: center;
+  font-size: 0.72rem;
+  color: #a09696;
+  background: var(--login-yellow-light);
+}
+
+.login-version i { color: var(--login-red); margin-right: 0.3rem; }
+
+@media (max-width: 768px) {
+  .login-container { max-width: 100%; }
+  .gov-header { padding: 1.25rem 1.5rem; }
+  .gov-header-title { font-size: 1.3rem; }
+  .login-title, .login-form, .login-legal, .login-version { padding-left: 1.5rem; padding-right: 1.5rem; }
+  .login-hint { margin-left: 1.5rem; margin-right: 1.5rem; }
+}

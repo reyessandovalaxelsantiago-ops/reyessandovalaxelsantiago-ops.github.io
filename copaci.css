@@ -1,0 +1,266 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --copaci-pink: #e88fae;
+  --copaci-pink-dark: #c76a8b;
+  --copaci-pink-light: #fbe5ed;
+  --copaci-orange: #f7b267;
+  --copaci-orange-dark: #e09240;
+  --copaci-orange-light: #fdf1e0;
+  --copaci-bg-from: #fdf5f7;
+  --copaci-bg-to: #fdf0e6;
+  --copaci-text: #3d2c33;
+  --gov-gray: #4b5563;
+  --font-titles: 'Merriweather', Georgia, serif;
+  --font-body: 'Source Sans 3', 'Segoe UI', sans-serif;
+}
+
+.copaci-body {
+  font-family: var(--font-body);
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--copaci-bg-from) 0%, var(--copaci-bg-to) 100%);
+  color: var(--copaci-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.copaci-panel {
+  width: 100%;
+  max-width: 1300px;
+  background: white;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(232,143,174,0.28), 0 0 0 1px rgba(232,143,174,0.12);
+  animation: fadeSlide 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.copaci-topbar {
+  background: linear-gradient(135deg, var(--copaci-pink) 0%, var(--copaci-pink-dark) 100%);
+  color: white;
+  padding: 1.25rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.copaci-topbar::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 5px;
+  background: var(--copaci-orange);
+}
+
+.copaci-topbar-left { display: flex; align-items: center; gap: 1rem; }
+
+.copaci-escudo {
+  width: 3rem; height: 3rem;
+  background: var(--copaci-orange);
+  color: var(--copaci-pink-dark);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.copaci-topbar-title {
+  font-family: var(--font-titles);
+  font-size: 1.15rem;
+  font-weight: 900;
+}
+
+.copaci-topbar-sub { font-size: 0.78rem; opacity: 0.9; margin-top: 0.15rem; }
+
+.copaci-topbar-right { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+
+.copaci-user {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  background: rgba(255,255,255,0.18);
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.copaci-user > i { font-size: 1.2rem; color: var(--copaci-orange-light); }
+
+.copaci-user-info { display: flex; flex-direction: column; line-height: 1.1; }
+.copaci-user-name { font-size: 0.88rem; font-weight: 700; }
+.copaci-user-role { font-size: 0.7rem; opacity: 0.85; }
+
+.logout-btn {
+  background: transparent;
+  border: 1.5px solid rgba(255,255,255,0.6);
+  color: white;
+  padding: 0.55rem 1.1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 0.85rem;
+  font-family: var(--font-body);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: 0.2s;
+}
+
+.logout-btn:hover { background: white; color: var(--copaci-pink-dark); }
+
+.copaci-section-header {
+  padding: 1.75rem 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--copaci-pink-light);
+}
+
+.copaci-section-header h2 {
+  font-family: var(--font-titles);
+  font-size: 1.35rem;
+  color: var(--copaci-pink-dark);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.copaci-section-header h2 i { color: var(--copaci-orange-dark); }
+
+.copaci-section-header p { font-size: 0.85rem; color: var(--gov-gray); margin-top: 0.25rem; }
+
+.copaci-badge {
+  background: var(--copaci-orange-light);
+  color: var(--copaci-orange-dark);
+  padding: 0.45rem 1rem;
+  border-radius: 2rem;
+  font-weight: 700;
+  font-size: 0.78rem;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  border: 1px solid var(--copaci-orange);
+}
+
+.copaci-actions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  padding: 1.75rem 2rem;
+}
+
+.copaci-action-card {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 1.1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 2px 8px rgba(232,143,174,0.08);
+  border: 1.5px solid var(--copaci-pink-light);
+  transition: all 0.25s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.copaci-action-card::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, var(--copaci-pink), var(--copaci-orange));
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.copaci-action-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--copaci-pink);
+  box-shadow: 0 12px 24px rgba(232,143,174,0.18);
+}
+
+.copaci-action-card:hover::before { opacity: 1; }
+
+.copaci-action-icon {
+  width: 3rem; height: 3rem;
+  background: linear-gradient(135deg, var(--copaci-pink-light) 0%, var(--copaci-orange-light) 100%);
+  color: var(--copaci-pink-dark);
+  border-radius: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+  transition: all 0.25s;
+}
+
+.copaci-action-card:hover .copaci-action-icon {
+  background: linear-gradient(135deg, var(--copaci-pink) 0%, var(--copaci-orange) 100%);
+  color: white;
+}
+
+.copaci-action-content { flex: 1; min-width: 0; }
+
+.copaci-action-card h3 {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--copaci-text);
+  line-height: 1.25;
+  margin-bottom: 0.2rem;
+}
+
+.copaci-action-card p { font-size: 0.78rem; color: var(--gov-gray); }
+
+.copaci-action-arrow {
+  color: var(--copaci-pink);
+  font-size: 0.9rem;
+  opacity: 0.5;
+  transition: all 0.25s;
+  flex-shrink: 0;
+}
+
+.copaci-action-card:hover .copaci-action-arrow {
+  opacity: 1;
+  transform: translateX(3px);
+  color: var(--copaci-orange-dark);
+}
+
+.copaci-footer {
+  padding: 1.1rem 2rem;
+  background: var(--copaci-pink-light);
+  border-top: 1px solid rgba(232,143,174,0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-size: 0.78rem;
+  color: var(--copaci-pink-dark);
+}
+
+.copaci-footer i { color: var(--copaci-orange-dark); }
+
+@media (max-width: 768px) {
+  .copaci-topbar { padding: 1rem 1.25rem; }
+  .copaci-topbar-title { font-size: 1rem; }
+  .copaci-section-header { padding: 1.25rem 1.25rem 0.75rem; }
+  .copaci-actions-grid { grid-template-columns: 1fr; padding: 1.25rem; }
+  .copaci-footer { padding: 1rem 1.25rem; justify-content: center; text-align: center; }
+  .copaci-user-info { display: none; }
+  .logout-btn span { display: none; }
+  .logout-btn { padding: 0.55rem 0.75rem; }
+}
